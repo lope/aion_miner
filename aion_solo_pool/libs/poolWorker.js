@@ -280,7 +280,7 @@ module.exports = function(logger){
                         else
                             pools[initalPool].getStratumServer().handleNewClient(socket);
 
-                    }).listen(parseInt(port), function() {
+                    }).listen(parseInt(port), '127.0.0.1', function() {
                         logger.debug(logSystem, logComponent, logSubCat, 'Switching "' + switchName
                             + '" listening for ' + algorithm
                             + ' on port ' + port
